@@ -13,7 +13,7 @@ public class GraphicsManagment : MonoBehaviour
     {
         Resolution[] resolution;
         resolution = Screen.resolutions;
-
+        
         res.onValueChanged.AddListener(delegate { Screen.SetResolution(resolution[res.value].width, resolution[res.value].height, Screen.fullScreen); });
 
         for (int i = 0; i < resolution.Length; i++)

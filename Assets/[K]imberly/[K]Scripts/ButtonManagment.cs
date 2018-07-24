@@ -13,6 +13,7 @@ public class ButtonManagment : MonoBehaviour
 
     public void QuitGame()
     {
+        
         Application.Quit(); //Build game for it to work
     }
    
