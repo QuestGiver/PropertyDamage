@@ -20,15 +20,15 @@ public class Timer : MonoBehaviour
 
     IEnumerator CountDown(float timer)
     {
-        for (float i = timer - 1; i > 0; i--)
+        for (float i = timer; i > 0; i--)
         {
             timerText.text = string.Format("{0:D2}:{1:D2}", (int)(i / 60 % 60), (int)(i % 60)); //Updates the UI while also doing the math for the Microwave timer
             yield return new WaitForSeconds(1);
-            if (i == 0) //Checks if the timer is at one and makes the text appear as a zero
+            if (i == 1) //Checks if the timer is at one and makes the text appear as a zero
             {
-                //timerText.text = string.Format("{0:D2}:{1:D2}", "00", "00");
-                saving.enabled = true;
-                SceneManager.LoadScene("EndScreen");
+                timerText.text = string.Format("{0:D2}:{1:D2}", "00", "00");
+                //saving.enabled = true;
+                SceneManager.LoadScene("MainMenu");
             }
         }
     }
