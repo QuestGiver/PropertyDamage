@@ -15,16 +15,49 @@ public class PlayerCam : MonoBehaviour
         float x = Input.GetAxis("Mouse X") * Time.deltaTime * 90f;
         yTotal += y;
 
-        if (yTotal > viewRange && yTotal < -viewRange)
-        {
-
-        }
-        else
+        if(yTotal <viewRange && yTotal > -viewRange)
         {
             transform.Rotate(-y, 0, 0);
-
-            player.transform.Rotate(0, x, 0);
         }
+        if(yTotal > viewRange)
+        {
+            yTotal = viewRange;
+        }
+        if (yTotal < -viewRange)
+        {
+            yTotal = -viewRange;
+        }
+        player.transform.Rotate(0, x, 0);
+        //Vector3 cRot = transform.localEulerAngles;
+
+        //float ix = Input.GetAxis("Mouse X");
+        //if (ix != 0)
+        //{
+        //    float deltax = viewRange * ix;
+
+        //    if (deltax < 0f)
+        //        cRot.x = 360 + deltax;
+        //    else
+        //        cRot.x = deltax;
+        //    Debug.Log(cRot.x);
+
+        //    transform.localEulerAngles = cRot;
+        //}
+
+
+
+
+
+        //if (yTotal > viewRange && yTotal < -viewRange)
+        //{
+
+        //}
+        //else
+        //{
+        //    transform.Rotate(-y, 0, 0);
+
+        //    player.transform.Rotate(0, x, 0);
+        //}
 
 
 
