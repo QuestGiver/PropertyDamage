@@ -17,14 +17,14 @@ public class ShardManager : MonoBehaviour
         shatterScripts = FindObjectsOfType<ShatterScript>();
         foreach (ShatterScript scripts in shatterScripts)
         {
-            if (scripts.GetComponent<Rigidbody>() == null)
-            {
-                scripts.gameObject.AddComponent<Rigidbody>();
-            }
-            if (scripts.GetComponent<MeshCollider>() == null)
-            {
-                scripts.gameObject.AddComponent<MeshCollider>();
-            }
+            //if (scripts.GetComponent<Rigidbody>() == null)
+            //{
+            //    scripts.gameObject.AddComponent<Rigidbody>();
+            //}
+            //if (scripts.GetComponent<MeshCollider>() == null)
+            //{
+            //    scripts.gameObject.AddComponent<MeshCollider>();
+            //}
             scripts.impactThreshhold = defaultImpactThreshhold;
             if (scripts.tag == "Wine")
             {
@@ -34,8 +34,8 @@ public class ShardManager : MonoBehaviour
             {
                 scripts.impactThreshhold = fragileImpactThreshhold;
             }
-            scripts.GetComponent<MeshCollider>().convex = true;
-            scripts.GetComponent<MeshCollider>().inflateMesh = true;
+            //scripts.GetComponent<MeshCollider>().convex = true;
+            //scripts.GetComponent<MeshCollider>().inflateMesh = true;
             scripts.GetComponent<MeshCollider>().skinWidth = meshThiccness;
         }
 

@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33020242250610312}
   - component: {fileID: 23673307577215862}
   - component: {fileID: 114950443437209114}
+  - component: {fileID: 54212308311698228}
+  - component: {fileID: 64771394915902294}
   m_Layer: 0
   m_Name: pSphere3_polySurface46_polySurface47
   m_TagString: Wine
@@ -55,6 +57,8 @@ GameObject:
   - component: {fileID: 33852554832081234}
   - component: {fileID: 23331144851126088}
   - component: {fileID: 114859946591635776}
+  - component: {fileID: 54004243497179390}
+  - component: {fileID: 64612848525181290}
   m_Layer: 0
   m_Name: polySurface49_polySurface45_pSphere3
   m_TagString: Wine
@@ -73,6 +77,8 @@ GameObject:
   - component: {fileID: 33622103304707412}
   - component: {fileID: 23016742297456792}
   - component: {fileID: 114736776436901804}
+  - component: {fileID: 54616334005375312}
+  - component: {fileID: 64368206287790198}
   m_Layer: 0
   m_Name: polySurface45_pSphere3_polySurface50
   m_TagString: Wine
@@ -91,6 +97,8 @@ GameObject:
   - component: {fileID: 33111993513838512}
   - component: {fileID: 23797152610989228}
   - component: {fileID: 114897291319136416}
+  - component: {fileID: 54196560280967894}
+  - component: {fileID: 64887574570153682}
   m_Layer: 0
   m_Name: pSphere3_polySurface48_polySurface46
   m_TagString: Wine
@@ -109,6 +117,8 @@ GameObject:
   - component: {fileID: 33824700029844540}
   - component: {fileID: 23048474266308062}
   - component: {fileID: 114215967963021966}
+  - component: {fileID: 54449682791152792}
+  - component: {fileID: 64145499766356586}
   m_Layer: 0
   m_Name: polySurface45_pSphere3_polySurface51
   m_TagString: Wine
@@ -162,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534043081191208}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.4854317, y: 246.76898, z: 15.894041}
+  m_LocalPosition: {x: -0.6829872, y: 227.04523, z: 50.985455}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4908000115236010}
@@ -394,6 +404,151 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1678635460553330}
   m_Mesh: {fileID: 4300004, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
+--- !u!54 &54004243497179390
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678635460553330}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54196560280967894
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826043954057998}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54212308311698228
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204146650405244}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54449682791152792
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864301781140258}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54616334005375312
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726790898146876}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &64145499766356586
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1864301781140258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
+--- !u!64 &64368206287790198
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726790898146876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
+--- !u!64 &64612848525181290
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678635460553330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300004, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
+--- !u!64 &64771394915902294
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204146650405244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300006, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
+--- !u!64 &64887574570153682
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826043954057998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300008, guid: ea7a36793781bbd499dc9030ada63611, type: 3}
 --- !u!114 &114215967963021966
 MonoBehaviour:
   m_ObjectHideFlags: 1
