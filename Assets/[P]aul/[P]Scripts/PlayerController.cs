@@ -19,8 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(Vector3.up * Input.GetAxis("Mouse X") * Time.timeScale * 3.5f);
-        transform.Rotate(Vector3.left * Input.GetAxis("Mouse Y") * Time.timeScale * 3.5f);
+        //transform.Rotate(Vector3.up * Input.GetAxis("Mouse X")* 3.5f);
     }
 
     public void Control(Vector3 move)
@@ -34,12 +33,16 @@ public class PlayerController : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection) + move;
             moveDirection *= speed;
             if (Input.GetButton("Jump"))
+            {
                 moveDirection.y = jumpSpeed;
+            }
+
 
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
     }
+
 
 
 }

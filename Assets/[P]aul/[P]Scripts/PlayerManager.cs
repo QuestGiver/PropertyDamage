@@ -36,20 +36,6 @@ public class PlayerManager : MonoBehaviour
         {
             movement = Vector3.zero;
         }
-        else
-        {
-            if (_gravityGun.isCasting)
-            {
-                if (_gravityGun.push)
-                {
-                    movement = transform.forward * _gravityGun.trueIntensity;
-                }
-                else
-                {
-                    movement = transform.forward * -_gravityGun.trueIntensity;
-                }
-            }
-        }
 
         //changes to speed caused by the gravity gun or other factors besides player input/default gravity go here
 
@@ -59,13 +45,21 @@ public class PlayerManager : MonoBehaviour
 
     void GravityGunUpdate()
     {
-        if (Input.GetKey(KeyCode.Q))
+
+        if (Input.GetMouseButtonDown(0))
         {
-            _gravityGun.push = !_gravityGun.push;
+            _gravityGun.pull = true;
+            _gravityGun.isCasting = true;
+            _gravityGun.CastGravity();
+        }
+        else
+        {
+            _gravityGun.isCasting = false;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(1))
         {
+            _gravityGun.pull = false;
             _gravityGun.isCasting = true;
             _gravityGun.CastGravity();
         }

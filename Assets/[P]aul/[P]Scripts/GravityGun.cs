@@ -8,21 +8,28 @@ public class GravityGun : MonoBehaviour
     public float trueIntensity;
     public float range;
     public float area;
-    public bool push;
+    public bool pull;
+    public float projectionOriginDist = 5;
     public bool isCasting = false;
-    public Camera camera;
 
     // Use this for initialization
     void Start()
     {
 
     }
-
+    RaycastHit hit;
     public void CastGravity()
     {
-        RaycastHit hit;
-        Physics.Raycast(camera.transform.position, transform.forward, out hit);//, range, 0, QueryTriggerInteraction.Collide);
-        GravityWell(hit.point);
+
+        if (Physics.Raycast(Camera.main.transform.position + (Camera.main.transform.forward * projectionOriginDist), Camera.main.transform.forward, out hit,range))
+        {
+            GravityWell(hit.point);
+        }//, range, 0, QueryTriggerInteraction.Collide);
+        else
+        {
+            GravityWell(Camera.main.transform.forward * range);
+        }
+
     }
 
     void GravityWell(Vector3 origin)
@@ -31,21 +38,31 @@ public class GravityGun : MonoBehaviour
         {
             //activate rigidbody of item here
 
-            float modifiedIntensity = trueIntensity * (1.0f - (Vector3.Distance(origin, item.transform.position) / area));
+            //float modifiedIntensity = trueIntensity;// * (1.0f - (Vector3.Distance(origin, item.transform.position) / area));
 
             if (item.GetComponent<Rigidbody>() != null && (item.tag != "Player"))
             {
-                if (push)
+                if (pull)
                 {
-                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * modifiedIntensity);
+                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * trueIntensity);
                 }
                 else
                 {
-                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * -modifiedIntensity);
+                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * -trueIntensity);
 
                 }
             }
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(Camera.main.transform.position + (Camera.main.transform.forward * projectionOriginDist), hit.point);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(Camera.main.transform.position + (Camera.main.transform.forward * projectionOriginDist), Camera.main.transform.forward * range);
+        Gizmos.DrawWireSphere(hit.point, area);
+
     }
 
 
