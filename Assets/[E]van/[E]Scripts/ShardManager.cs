@@ -25,6 +25,10 @@ public class ShardManager : MonoBehaviour
             //{
             //    scripts.gameObject.AddComponent<MeshCollider>();
             //}
+            if (scripts.GetComponent<AddPoints>() == null)
+            {
+                scripts.gameObject.AddComponent<AddPoints>();
+            }
             scripts.impactThreshhold = defaultImpactThreshhold;
             if (scripts.tag == "Wine")
             {

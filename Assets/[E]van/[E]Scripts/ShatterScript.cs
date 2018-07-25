@@ -10,6 +10,8 @@ public class ShatterScript : MonoBehaviour
 
     public Rigidbody rb;
 
+    public AddPoints add;
+
 
     public bool IsShattered
     {
@@ -37,14 +39,17 @@ public class ShatterScript : MonoBehaviour
 
     void Start ()
     {
+
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
+        add = GetComponent<AddPoints>();
 	}
 
     void CheckShattered()
     {
         if (IsShattered == true)
         {
+            add.addPoint = true;
             rb.isKinematic = false;
             StartCoroutine(StopMoving());
         }

@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //transform.Rotate(Vector3.up * Input.GetAxis("Mouse X")* 3.5f);
+        if (transform.rotation.eulerAngles.x != 0)
+        {
+            transform.rotation.eulerAngles.Set(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+        }
     }
 
     public void Control(Vector3 move)

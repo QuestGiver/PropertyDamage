@@ -9,12 +9,10 @@ public class PointsUI : MonoBehaviour
     [SerializeField]
     private Text pointsUI;
 
-   
 
-    // Use this for initialization
-    void Start()
+    private void Start()
     {
-        PointsUI.instance = this;
+        PointsUI.instance = this;    
     }
 
     // Update is called once per frame

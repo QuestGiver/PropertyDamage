@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/[K]imberly/[K]Scenes/MainMenu.unity
+    guid: e4858c855d147134a835da4919cabc74
+  - enabled: 1
     path: Assets/[E]van/[E]vanTestScene.unity
     guid: 0dbad4dbcd6910845b6b93d10dadb2f0
