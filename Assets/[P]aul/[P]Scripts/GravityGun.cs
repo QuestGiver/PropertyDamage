@@ -39,16 +39,19 @@ public class GravityGun : MonoBehaviour
             //activate rigidbody of item here
 
             //float modifiedIntensity = trueIntensity;// * (1.0f - (Vector3.Distance(origin, item.transform.position) / area));
-
-            if (item.GetComponent<Rigidbody>() != null && (item.tag != "Player"))
+            Rigidbody bdy = item.GetComponent<Rigidbody>();
+            if (bdy != null && (item.tag != "Player"))
             {
+                item.GetComponent<ShatterScript>().IsShattered = true;
+                
+
                 if (pull)
                 {
-                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * trueIntensity);
+                    bdy.AddForce((origin - item.ClosestPoint(origin)).normalized * trueIntensity);
                 }
                 else
                 {
-                    item.GetComponent<Rigidbody>().AddForce((origin - item.ClosestPoint(origin)).normalized * -trueIntensity);
+                    bdy.AddForce((origin - item.ClosestPoint(origin)).normalized * -trueIntensity);
 
                 }
             }
