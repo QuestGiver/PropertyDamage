@@ -35,25 +35,32 @@ public class ShatterScript : MonoBehaviour
         }
     }
 
-    // Use this for initialization
     void Start ()
     {
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
-        //rb.detectCollisions = false;
 	}
-	
+
     void CheckShattered()
     {
         if (IsShattered == true)
         {
             rb.isKinematic = false;
-            //rb.detectCollisions = true;
+            StartCoroutine(StopMoving());
         }
         else
         {
             rb.isKinematic = true;
-            //rb.detectCollisions = false;
+        }
+    }
+
+    IEnumerator StopMoving()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (rb.velocity.magnitude <= 0.5f)
+        {
+            rb.isKinematic = true;
+            rb.detectCollisions = false;
         }
     }
 }
