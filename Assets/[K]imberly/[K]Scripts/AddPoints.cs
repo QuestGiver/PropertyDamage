@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AddPoints : MonoBehaviour
 {
-    int point;
     // Update is called once per frame
     void Update()
     {
